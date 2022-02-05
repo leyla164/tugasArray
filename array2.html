@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="harimau"></div>
+    
+    <script>
+        	var x = prompt("Sebutkan 3 Nama hewan : "); //buat method prompt
+		var h = []; //buat variable untuk menampung nilai kedalam array
+
+		if(x){ //kondisi jika prompt di input dan klik ok
+			h.push(x); //push method untuk memasukan data prompt kedalam array
+			var x = prompt("Masukan Lagi : ");
+			if(x){
+				h.push(x);
+				var x = prompt("Masukan Lagi : ");
+				if(x){
+					h.push(x);
+					document.getElementById("harimau").innerHTML = "Hasil Inputan Anda : "+ h; //cetak hasil inputan prompt kedalam id demo
+				}else{
+					document.getElementById("harimau").innerHTML = "Hasil Inputan Anda : "+ h;
+				}
+			}else{
+				document.getElementById("harimau").innerHTML = "Hasil Inputan Anda : "+ h;
+			}
+		}else{
+			document.getElementById("harimau").innerHTML = "Anda Belum Input Apa-Apa Silahkan Refresh";
+		}
+
+        
+    </script>
+</body>
+</html>
